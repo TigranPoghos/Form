@@ -1,0 +1,39 @@
+label input {
+    display: none;
+}
+
+label input + span {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+label input + span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 10px;
+    width: 10px;
+    border: 1px solid rosybrown;
+    /* margin-top: -5px; */
+    transform: translateY(-50%);
+}
+
+label input:checked + span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 200px;
+    background-color: brown;
+    margin-left: 3px;
+    transform: translateY(-50%);
+}    
+
+label input:checked+span {
+    color: brown;
+}
